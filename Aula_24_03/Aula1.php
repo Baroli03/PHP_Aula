@@ -83,10 +83,7 @@
 
 
     function divicao (float $num1,float $num2) {
-        var_dump($num1);
-        var_dump($num2);
         $res = $num1 / $num2;
-        var_dump($res);
     }
 
     $var1 = 10;
@@ -118,8 +115,33 @@
     subtracao(10);
 
 
+    // $n1 = 0;
+    // if(isset($_GET["n1"])){
+    //     $n1 = $_GET["n1"];
+    // }
 
+    // $n2 = 0;
+
+    // if(isset($_GET["n2"])){
+    //     $n2 = $_GET["n2"];
+    // }
+    
+
+    // /Aula_24_03/Aula2.php?n2=50&n1=32  << URL
+    // n1 = ver se existe o get se existir n1 = $_GET["n1"] se não n1 = 0
+    // $n1 = isset($_GET["n1"]) ? $_GET["n1"] : 0;
+    // $n2 = isset($_GET["n2"]) ? $_GET["n2"] : 0;
+
+
+    // Mesma coisa que o anterior mas muito mais simplificado
+    $n1 = $_GET["n1"] ?? 0;
+    $n2 = $_GET["n2"] ?? 0;
+    
+    $soma =  $n1 + $n2;
+
+    echo "<br>Soma = " . $n1. " + " . $n2 . " = $soma";
 
 
 ?>
+
 
